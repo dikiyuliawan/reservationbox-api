@@ -21,8 +21,8 @@ func main() {
 	fmt.Println("Database connection success")
 
 	// hotel := hotel.Hotel{}
-	// hotel.Hotel_name = "Bobobox Dago"
-	// hotel.Address = "Jalan Sultan Tirtayasa No 11, Dago, Bandung"
+	// hotel.Hotel_name = "Bobobox Alun Alun"
+	// hotel.Address = "Jalan Kepatihan No 8, Balonggede, Bandung"
 
 	// err = db.Create(&hotel).Error
 	// if err != nil {
@@ -52,7 +52,8 @@ func main() {
 
 	router.GET("/", handler.RootHandler)
 	router.GET("/book", handler.BookHandler)
-	router.POST("/hotel", handler.HotelHandler)
+	router.GET("/hotel", handler.GetHotelHandler)
+	router.POST("/hotel", handler.CreateHotelHandler)
 
 	router.Run()
 }

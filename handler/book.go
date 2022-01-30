@@ -1,12 +1,14 @@
 package handler
 
 import (
-	"log"
+	"fmt"
 	"net/http"
 
 	"reservationbox-api/hotel"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 func RootHandler(c *gin.Context) {
@@ -25,16 +27,39 @@ func BookHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"checkin_date": checkin_date, "checkout_date": checkout_date, "room_qty": room_qty, "room_type_id": room_type_id})
 }
 
-func HotelHandler(c *gin.Context) {
-	var hotelInput hotel.HotelInput
+// get list hotel
+func GetHotelHandler(c *gin.Context) {
+	dsn := "root:@tcp(127.0.0.1:3306)/reservationbox-api?charset=utf8mb4&parseTime=True&loc=Local"
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
-	err := c.ShouldBindJSON(&hotelInput)
+	var hotel []hotel.Hotel
+
+	err = db.Find(&hotel).Error
+
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error finding hotel record")
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"hotel_name": hotelInput.Hotel_name,
-		"address":    hotelInput.Address,
+		"status": "success",
+		"data":   hotel,
+	})
+
+}
+
+// create new data hotel
+func CreateHotelHandler(c *gin.Context) {
+	dsn := "root:@tcp(127.0.0.1:3306)/reservationbox-api?charset=utf8mb4&parseTime=True&loc=Local"
+	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
+	data := hotel.Hotel{
+		Hotel_name: c.PostForm("hotel_name"),
+		Address:    c.PostForm("address"),
+	}
+
+	db.Create(&data)
+	c.JSON(http.StatusOK, gin.H{
+		"status": "Data successfully created",
+		"data":   data,
 	})
 }
