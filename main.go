@@ -20,27 +20,6 @@ func main() {
 
 	fmt.Println("Database connection success")
 
-	// hotel := hotel.Hotel{}
-	// hotel.Hotel_name = "Bobobox Alun Alun"
-	// hotel.Address = "Jalan Kepatihan No 8, Balonggede, Bandung"
-
-	// err = db.Create(&hotel).Error
-	// if err != nil {
-	// 	fmt.Println("Error creating hotel record")
-	// }
-
-	// roomtype := roomtype.Roomtype{}
-	// roomtype.Name = "Earth Double"
-
-	// err = db.Create(&roomtype).Error
-	// if err != nil {
-	// 	fmt.Println("Error creating roomtype record")
-	// }
-
-	// var hotel hotel.Hotel
-
-	// err = db.First(&hotel).Error
-
 	router := gin.Default()
 
 	router.GET("/", handler.RootHandler)
