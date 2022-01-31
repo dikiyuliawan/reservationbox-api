@@ -45,9 +45,6 @@ func main() {
 	// 	fmt.Println("Error finding hotel record")
 	// }
 
-	// fmt.Println("Hotel name", hotel.Hotel_name)
-	// fmt.Println("Hotel object %v", hotel)
-
 	router := gin.Default()
 
 	router.GET("/", handler.RootHandler)
@@ -62,6 +59,8 @@ func main() {
 	router.POST("/price", handler.CreatePriceHandler)
 
 	router.POST("/room", handler.RoomHandler)
+
+	router.GET("/promo", handler.PromoHandler)
 
 	router.Run()
 }

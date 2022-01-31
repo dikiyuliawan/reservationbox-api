@@ -182,3 +182,27 @@ func RoomHandler(c *gin.Context) {
 	})
 
 }
+
+func PromoHandler(c *gin.Context) {
+	dsn := "root:@tcp(127.0.0.1:3306)/reservationbox-api?charset=utf8mb4&parseTime=True&loc=Local"
+	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
+	type Result struct {
+		Name       string
+		Promo_name string
+		Promo      int
+		Price      int
+	}
+
+	result := []Result{}
+
+	err := db.Model(&roomtype.Roomtype{}).Select("roomtypes.name, prices.price, promos.promo_name, promos.promo").Joins("left join prices on prices.room_type_id = roomtypes.id").Joins("left join promos on promos.room_type_id = roomtypes.id").Find(&result)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": result,
+	})
+}
