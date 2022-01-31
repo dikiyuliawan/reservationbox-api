@@ -41,10 +41,6 @@ func main() {
 
 	// err = db.First(&hotel).Error
 
-	// if err != nil {
-	// 	fmt.Println("Error finding hotel record")
-	// }
-
 	router := gin.Default()
 
 	router.GET("/", handler.RootHandler)
@@ -61,6 +57,7 @@ func main() {
 	router.POST("/room", handler.RoomHandler)
 
 	router.GET("/promo", handler.PromoHandler)
+	router.POST("/promo", handler.CreatePromoHandler)
 
 	router.Run()
 }
