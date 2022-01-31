@@ -52,8 +52,16 @@ func main() {
 
 	router.GET("/", handler.RootHandler)
 	router.GET("/book", handler.BookHandler)
+
 	router.GET("/hotel", handler.GetHotelHandler)
 	router.POST("/hotel", handler.CreateHotelHandler)
+
+	router.GET("/roomtype", handler.RoomtypeHandler)
+
+	router.GET("/price", handler.PriceHandler)
+	router.POST("/price", handler.CreatePriceHandler)
+
+	router.POST("/room", handler.RoomHandler)
 
 	router.Run()
 }
