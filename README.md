@@ -3,6 +3,7 @@
 # How to set up application
 
 - Cloning git on this link : https://github.com/dikiyuliawan/reservationbox-api.git
+- Start your Sql Server (e.g Xampp, Mampp, Wampp, etc)
 - Create database : reservationbox-api
 - Go to reservationbox-api's folder and run **go main run.go** on terminal
 
@@ -12,7 +13,7 @@
    - Enter url : **localhost:8080/hotel** on Postman with GET method
      ![get_hotel](./assets/img/get_hotel.png)
 
-2. - How to get list room
+2. - How to get list roomtype
    - Enter url : **localhost:8080/roomtype** on Postman with GET method
      ![get_roomtype](./assets/img/get_roomtype.png)
 

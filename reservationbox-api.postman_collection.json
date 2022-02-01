@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "9d752e2c-84ac-4c90-9e71-94aabbb8783d",
+		"name": "reservationbox-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get list hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "get list hotel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/hotel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 13:57:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "390"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"ID\": 1,\n            \"Hotel_name\": \"Bobobox Dago\",\n            \"Address\": \"Jalan Sultan Tirtayasa No 11, Dago, Bandung\"\n        },\n        {\n            \"ID\": 2,\n            \"Hotel_name\": \"Bobobox Paskal\",\n            \"Address\": \"Jalan Pasir Kaliki No 76A, Pasirkaliki, Bandung\"\n        },\n        {\n            \"ID\": 3,\n            \"Hotel_name\": \"Bobobox Alun Alun\",\n            \"Address\": \"Jalan Kepatihan No 8, Balonggede, Bandung\"\n        },\n        {\n            \"ID\": 6,\n            \"Hotel_name\": \"Bobobox Cipaganti\",\n            \"Address\": \"Cipaganti, Bandung\"\n        }\n    ],\n    \"status\": \"success\"\n}"
+				},
+				{
+					"name": "get list hotel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/hotel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:11:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "428"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"ID\": 1,\n            \"Hotel_name\": \"Bobobox Dago\",\n            \"Address\": \"Jalan Sultan Tirtayasa No 11, Dago, Bandung\"\n        },\n        {\n            \"ID\": 2,\n            \"Hotel_name\": \"Bobobox Paskal\",\n            \"Address\": \"Jalan Pasir Kaliki No 76A, Pasirkaliki, Bandung\"\n        },\n        {\n            \"ID\": 3,\n            \"Hotel_name\": \"Bobobox Alun Alun\",\n            \"Address\": \"Jalan Kepatihan No 8, Balonggede, Bandung\"\n        },\n        {\n            \"ID\": 6,\n            \"Hotel_name\": \"Bobobox Cipaganti\",\n            \"Address\": \"Cipaganti, Bandung\"\n        },\n        {\n            \"ID\": 7,\n            \"Hotel_name\": \"\",\n            \"Address\": \"\"\n        }\n    ],\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "post data hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "post data hotel",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/hotel?hotel_name=Bobobox Tanah bang&address=Gambir, Jakarta",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel"
+							],
+							"query": [
+								{
+									"key": "hotel_name",
+									"value": "Bobobox Tanah bang"
+								},
+								{
+									"key": "address",
+									"value": "Gambir, Jakarta"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:00:06 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ID\": 7,\n        \"Hotel_name\": \"\",\n        \"Address\": \"\"\n    },\n    \"status\": \"Data successfully created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get list roomtype",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "get list room",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/roomtype",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roomtype"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:01:19 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"ID\": 1,\n            \"Name\": \"Sky Single\"\n        },\n        {\n            \"ID\": 2,\n            \"Name\": \"Earth Single\"\n        },\n        {\n            \"ID\": 3,\n            \"Name\": \"Sky Double\"\n        },\n        {\n            \"ID\": 4,\n            \"Name\": \"Earth Double\"\n        }\n    ],\n    \"status\": \"Succesfully get data room type\"\n}"
+				}
+			]
+		},
+		{
+			"name": "search room availability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "search room availability",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book?checkin_date=2022-01-02&checkout_date=2022-02-02&room_qty=1&room_type_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book"
+							],
+							"query": [
+								{
+									"key": "checkin_date",
+									"value": "2022-01-02"
+								},
+								{
+									"key": "checkout_date",
+									"value": "2022-02-02"
+								},
+								{
+									"key": "room_qty",
+									"value": "1"
+								},
+								{
+									"key": "room_type_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:02:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"available_room\": [\n        {\n            \"room_id\": 1,\n            \"price\": 150000,\n            \"room_number\": 101\n        }\n    ],\n    \"checkin_date\": \"2022-01-02\",\n    \"checkout_date\": \"2022-02-02\",\n    \"room_qty\": \"1\",\n    \"room_type_id\": \"1\",\n    \"total_price\": 150000\n}"
+				}
+			]
+		},
+		{
+			"name": "get list promo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/promo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get list promo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/promo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"promo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:03:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "382"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"Name\": \"Sky Single\",\n            \"Promo_name\": \"Promo Lunar New Year\",\n            \"Promo\": 25000,\n            \"Price\": 150000,\n            \"Final_price\": 125000\n        },\n        {\n            \"Name\": \"Earth Single\",\n            \"Promo_name\": \"Promo New Year\",\n            \"Promo\": 35000,\n            \"Price\": 200000,\n            \"Final_price\": 165000\n        },\n        {\n            \"Name\": \"Sky Double\",\n            \"Promo_name\": \"Promo3\",\n            \"Promo\": 30000,\n            \"Price\": 0,\n            \"Final_price\": 0\n        },\n        {\n            \"Name\": \"Earth Double\",\n            \"Promo_name\": \"\",\n            \"Promo\": 0,\n            \"Price\": 0,\n            \"Final_price\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "post new promo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "post new promo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/promo?room_type_id=3&promo_name=promo 3&promo=20000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"promo"
+							],
+							"query": [
+								{
+									"key": "room_type_id",
+									"value": "3"
+								},
+								{
+									"key": "promo_name",
+									"value": "promo 3"
+								},
+								{
+									"key": "promo",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Feb 2022 14:06:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ID\": 4,\n        \"Room_type_id\": 0,\n        \"Promo_name\": \"\",\n        \"Promo\": 0\n    },\n    \"status\": \"Data successfully created\"\n}"
+				}
+			]
+		}
+	]
+}
